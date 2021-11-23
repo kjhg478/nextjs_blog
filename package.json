@@ -13,11 +13,11 @@
     }
   },
   "lint-staged": {
-    "./src/**/*.(ts,tsx)": [
+    "./src/**/*.{ts,tsx}": [
       "eslint --fix",
       "git add"
     ],
-    "./src/**/*.(css,scss,js)": "prettier --write"
+    "./src/**/*.{css,scss,js}": "prettier --write"
   },
   "keywords": [],
   "author": "",

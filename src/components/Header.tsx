@@ -11,7 +11,7 @@ const Header: React.FC<HeaderProps> = () => {
             <AppLink href="/" label="Next.js" />
             <nav>
                 <AppLink href="/about" label="About" />
-                <AppLink href="contact" label="Contact" />
+                <AppLink href="/contact" label="Contact" />
             </nav>
         </header>
     
