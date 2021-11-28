@@ -1,21 +1,22 @@
 module.exports = {
-    root: true,
-    parser: '@typescript-eslint/parser',
-    parserOptions: {
+  root: true,
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
-    ecmaFeatures: { jsx: true }
-    },
-    globals: {
-    React: 'writable'
-    },
-    settings: {
+    ecmaFeatures: { jsx: true },
+  },
+  extends: ['prettier/@typescript-eslint', 'plugin:prettier/recommended'],
+  globals: {
+    React: 'writable',
+  },
+  settings: {
     react: {
-    version: 'detect'
-    } 
+      version: 'detect',
     },
-    env: {
+  },
+  env: {
     node: true,
-    browser: true
-    }
-}
+    browser: true,
+  },
+};

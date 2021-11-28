@@ -4,6 +4,7 @@ import Layout from '../../components/Layout';
 import matter from 'gray-matter';
 import fs from 'fs';
 import path from 'path';
+import { Container } from '../../styles/Container';
 
 interface BlogPostProps {
     content: string,
@@ -17,11 +18,11 @@ interface BlogPostProps {
 const BlogPost: NextPage<BlogPostProps> = ({ frontmatter, content }) => {
     return (
         <Layout pageTitle={frontmatter.title}>
-            <div>
+            <Container>
                 <h3>By {frontmatter.author} - {frontmatter.date} </h3>
                 <h1>{frontmatter.title}</h1>
                 <ReactMarkdown children={content} />
-            </div>
+            </Container>
         </Layout>
     )
 }
