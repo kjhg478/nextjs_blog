@@ -1,4 +1,4 @@
-import NextDocument from 'next/Document';
+import NextDocument, { Head, Html, Main, NextScript } from 'next/Document';
 import { ServerStyleSheet } from 'styled-components';
 
 export default class Document extends NextDocument {
@@ -21,5 +21,17 @@ export default class Document extends NextDocument {
         ),
       };
     } catch {}
+  }
+
+  render() {
+    return (
+      <Html lang="en">
+        <Head />
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
   }
 }
