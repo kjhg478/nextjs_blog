@@ -20,17 +20,10 @@ const Header: React.FC<HeaderProps> = () => {
           <nav>
             <AppLink href="/about" label="About" />
             <AppLink href="/contact" label="Contact" />
-            <Login onClick={() => setIsOpened(true)}>로그인</Login>
+            <AppLink href="/login" label="Login"></AppLink>
           </nav>
         </Container>
       </HeaderElement>
-      {isOpened && (
-        <LoginModal
-          setIsOpened={setIsOpened}
-          mainText="로그인"
-          subText="이메일로 로그인"
-        />
-      )}
     </>
   );
 };
@@ -38,17 +31,12 @@ const Header: React.FC<HeaderProps> = () => {
 export default Header;
 
 const Login = styled.button`
-  height: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 0 0.5em;
   font-size: 1rem;
-  border-radius: 1rem;
   border: none;
   outline: none;
-  font-weight: bold;
   word-break: keep-all;
-  background: rgb(52, 58, 64);
-  color: white;
+  color: #293241;
   transition: all 0.125s ease-in 0s;
   cursor: pointer;
 `;

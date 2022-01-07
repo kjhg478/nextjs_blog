@@ -4,14 +4,13 @@ import styled from 'styled-components';
 interface FinalSubmitProps {
   setIsOpened: (e: boolean) => void;
   mainText: string;
-  subText: string;
+  subText?: string;
   thirdText?: string;
 }
 
 export const LoginModal: React.FC<FinalSubmitProps> = ({
   setIsOpened,
   mainText,
-  subText,
 }) => {
   const onClick = () => {
     setIsOpened(false);
@@ -43,7 +42,6 @@ export const LoginModal: React.FC<FinalSubmitProps> = ({
                 />
               </LoginImage>
             </LoginTop>
-            <p className="sub_text">{subText}</p>
             <LoginForm>
               <LoginInput />
               <LoginButton>로그인</LoginButton>
@@ -133,15 +131,10 @@ const BoxWrapper = styled.div`
   flex: 1;
   height: 100%;
   background: #fff;
-  padding-top: 35px;
   overflow-y: auto;
   text-align: left;
   .contract_text {
     font-size: 1.3rem;
-    margin-left: 5px;
-  }
-
-  .sub_text {
     margin-left: 5px;
   }
 `;

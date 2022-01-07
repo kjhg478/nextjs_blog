@@ -10,11 +10,12 @@ interface LoginProps {
 }
 
 const Login: React.FC<LoginProps> = () => {
-  const { register, handleSubmit } = useForm<LoginProps>();
+  const { register, handleSubmit, getValues } = useForm<LoginProps>();
   const [result, setResult] = useState('');
   const onSubmit: SubmitHandler<LoginProps> = (data) => {
+    const getData = getValues();
+    console.log(getData);
     setResult(JSON.stringify(data));
-    console.log(data);
   };
 
   return (
